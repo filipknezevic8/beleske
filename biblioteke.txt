@@ -7,3 +7,45 @@ Microsoft.EntityFrameworkCore.Tools 8.0.23
 Npgsql.EntityFrameworkCore.PostgreSQL 8.0.11
 Serilog.AspNetCore 8.0.3
 Swashbuckle.AspNetCore 6.4.0
+
+Shouldly
+
+<PackageReference Include="Microsoft.NET.Test.Sdk" Version="*" />
+<PackageReference Include="xunit" Version="*" />
+<PackageReference Include="xunit.runner.visualstudio" Version="*" />
+<PackageReference Include="FluentAssertions" Version="*" />
+<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="*" />
+
+U kodu koji sam napisao korišćen je FluentAssertions, a ne Shouldly.
+
+To se vidi po ovom delu:
+
+response.StatusCode
+    .Should()
+    .Be(HttpStatusCode.Forbidden);
+
+i
+
+response.StatusCode
+    .Should()
+    .Be(HttpStatusCode.BadRequest);
+
+kao i po:
+
+using FluentAssertions;
+
+na vrhu fajla.
+
+Da je korišćen Shouldly, kod bi izgledao ovako:
+
+response.StatusCode
+    .ShouldBe(HttpStatusCode.Forbidden);
+
+ili
+
+response.StatusCode
+    .ShouldBe(HttpStatusCode.BadRequest);
+
+a na vrhu bi stajalo:
+
+using Shouldly;
