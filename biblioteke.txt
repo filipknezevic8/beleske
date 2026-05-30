@@ -1,0 +1,9 @@
+AutoMapper 16.1.1
+Microsoft.AspNetCore.Authentication.Google 8.0.23
+Microsoft.AspNetCore.Authentication.JwtBearer 8.0.23
+Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.23
+Microsoft.EntityFrameworkCore 8.0.23
+Microsoft.EntityFrameworkCore.Tools 8.0.23
+Npgsql.EntityFrameworkCore.PostgreSQL 8.0.11
+Serilog.AspNetCore 8.0.3
+Swashbuckle.AspNetCore 6.4.0
